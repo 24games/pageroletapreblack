@@ -54,13 +54,13 @@ export default function WheelInteractive({
       {/* Wheel container */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Top pointer/marker at 12 o'clock - FIXED */}
-        <div className="mb-[-10px] flex justify-center relative z-30">
+        <div className="mb-[-15px] flex justify-center relative z-30">
           {pointerSrc ? (
             <Image
               src={pointerSrc}
               alt={pointerAlt}
-              width={80}
-              height={80}
+              width={35}
+              height={35}
               className="drop-shadow-[0_0_15px_rgba(0,229,255,0.6)]"
               priority
             />
