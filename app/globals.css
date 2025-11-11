@@ -24,3 +24,65 @@ body {
   }
 }
 
+/* Animação de giro da roleta - 5 segundos */
+@keyframes spin-wheel {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1800deg); /* 5 voltas completas */
+  }
+}
+
+/* Animação idle - "ameaça" girar */
+@keyframes wobble-wheel {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+/* Pulse lento quando parada */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1.1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+}
+
+/* Pulse rápido quando girando */
+@keyframes pulse-fast {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.3);
+  }
+}
+
+.animate-spin-wheel {
+  animation: spin-wheel 5s cubic-bezier(0.17, 0.67, 0.12, 0.99) forwards;
+}
+
+.animate-wobble-wheel {
+  animation: wobble-wheel 3s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 0.5s ease-in-out infinite;
+}

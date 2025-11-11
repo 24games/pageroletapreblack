@@ -1,6 +1,6 @@
 import HeaderLogo from './components/HeaderLogo'
 import TopBadge from './components/TopBadge'
-import Wheel from './components/Wheel'
+import WheelInteractive from './components/WheelInteractive'
 import LangSelector from './components/LangSelector'
 import FooterLegal from './components/FooterLegal'
 
@@ -12,8 +12,8 @@ export default function LandingPage() {
         {/* Header with logo */}
         <header>
           <HeaderLogo 
-            src="/placeholder-logo.svg" 
-            alt="Site logo placeholder" 
+            src="/logo-24games.png" 
+            alt="24Games Logo" 
           />
         </header>
 
@@ -25,10 +25,12 @@ export default function LandingPage() {
             label="Giros Gratis" 
           />
 
-          {/* Wheel section */}
-          <Wheel 
-            src="/placeholder-wheel.svg" 
-            alt="Wheel placeholder" 
+          {/* Interactive Wheel section */}
+          <WheelInteractive 
+            src="/wheel-24games.png" 
+            alt="Roda da Roleta 24Games"
+            pointerSrc="/pointer-24games.png"
+            pointerAlt="Ponteiro da Roleta"
           />
 
           {/* Language selector */}
@@ -44,4 +46,3 @@ export default function LandingPage() {
     </main>
   )
 }
-
