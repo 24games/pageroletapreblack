@@ -12,7 +12,7 @@ export default function LandingPage() {
         {/* Header with logo */}
         <header>
           <HeaderLogo 
-            src="/logo-24games.png" 
+            src="/logo-24games.webp" 
             alt="24Games Logo" 
           />
         </header>
@@ -27,9 +27,9 @@ export default function LandingPage() {
 
           {/* Interactive Wheel section */}
           <WheelInteractive 
-            src="/wheel-24games.png" 
+            src="/wheel-24games.webp" 
             alt="Roda da Roleta 24Games"
-            pointerSrc="/pointer-24games.png"
+            pointerSrc="/pointer-24games.webp"
             pointerAlt="Ponteiro da Roleta"
           />
 
