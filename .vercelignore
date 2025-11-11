@@ -1,0 +1,4 @@
+# Vercel ignore file
+*.log
+.DS_Store
+
