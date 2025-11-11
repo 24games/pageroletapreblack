@@ -3,9 +3,11 @@ import Image from 'next/image'
 interface WheelProps {
   src: string
   alt: string
+  pointerSrc?: string
+  pointerAlt?: string
 }
 
-export default function Wheel({ src, alt }: WheelProps) {
+export default function Wheel({ src, alt, pointerSrc, pointerAlt = "Ponteiro" }: WheelProps) {
   return (
     <div className="relative flex justify-center items-center py-8 px-4">
       {/* Radial spotlight rays background */}
@@ -31,8 +33,19 @@ export default function Wheel({ src, alt }: WheelProps) {
       {/* Wheel container */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Top pointer/marker at 12 o'clock */}
-        <div className="mb-2 flex justify-center">
-          <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-accent-glow drop-shadow-glow-subtle" />
+        <div className="mb-[-10px] flex justify-center relative z-20">
+          {pointerSrc ? (
+            <Image
+              src={pointerSrc}
+              alt={pointerAlt}
+              width={60}
+              height={60}
+              className="drop-shadow-glow-strong"
+              priority
+            />
+          ) : (
+            <div className="w-0 h-0 border-l-[12px] border-l-transparent border-r-[12px] border-r-transparent border-t-[20px] border-t-accent-glow drop-shadow-glow-subtle" />
+          )}
         </div>
 
         {/* Wheel image */}
@@ -41,13 +54,13 @@ export default function Wheel({ src, alt }: WheelProps) {
           <div className="absolute inset-0 bg-accent-glow/10 blur-3xl rounded-full scale-110" />
           
           {/* Wheel */}
-          <div className="relative bg-gradient-to-br from-white/10 to-transparent border-2 border-accent-glow/40 rounded-full p-4 shadow-wheel-drop">
+          <div className="relative">
             <Image
               src={src}
               alt={alt}
-              width={320}
-              height={320}
-              className="relative z-10 rounded-full"
+              width={340}
+              height={340}
+              className="relative z-10 drop-shadow-2xl"
               priority
             />
           </div>
