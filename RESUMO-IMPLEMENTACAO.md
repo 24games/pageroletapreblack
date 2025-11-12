@@ -204,3 +204,4 @@ A Vercel faz deploy automático!
 
 **Tudo pronto! Agora é só salvar as imagens e testar!** 🎮
 
+

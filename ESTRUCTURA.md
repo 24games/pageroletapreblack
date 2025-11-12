@@ -197,3 +197,4 @@ page.tsx
 
 **Próximo paso**: Reemplazar placeholders con assets reales 🎨
 
+

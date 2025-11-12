@@ -167,3 +167,4 @@ Se nenhuma solução funcionar, tire prints de:
 
 Desconectar e reconectar o Git resolve 90% dos casos de deploy travado!
 
+

@@ -36,3 +36,4 @@ Ver `INSTRUCCIONES.md` para personalización detallada.
 
 **¿Problemas?** → Verificar que Node.js 18+ esté instalado
 
+

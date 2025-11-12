@@ -8,13 +8,17 @@ interface WheelInteractiveProps {
   alt: string
   pointerSrc?: string
   pointerAlt?: string
+  onSpinStart?: () => void
+  onSpinEnd?: () => void
 }
 
 export default function WheelInteractive({ 
   src, 
   alt, 
   pointerSrc, 
-  pointerAlt = "Ponteiro" 
+  pointerAlt = "Ponteiro",
+  onSpinStart,
+  onSpinEnd
 }: WheelInteractiveProps) {
   const [isSpinning, setIsSpinning] = useState(false)
 
@@ -22,10 +26,12 @@ export default function WheelInteractive({
     if (isSpinning) return
     
     setIsSpinning(true)
+    onSpinStart?.()
     
     // Para após 5 segundos
     setTimeout(() => {
       setIsSpinning(false)
+      onSpinEnd?.()
     }, 5000)
   }
 

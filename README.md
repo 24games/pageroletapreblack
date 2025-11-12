@@ -115,3 +115,4 @@ Edite diretamente em `app/landing/components/FooterLegal.tsx`
 
 © 2025 24Games. Todos los derechos reservados y protegidos por la ley.
 
+

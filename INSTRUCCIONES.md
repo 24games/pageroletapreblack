@@ -136,3 +136,4 @@ Para dudas o modificaciones, referirse al código en:
 - `app/landing/components/` - Componentes individuales
 - `tailwind.config.ts` - Configuración de estilos
 
+

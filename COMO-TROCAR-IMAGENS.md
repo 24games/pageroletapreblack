@@ -186,3 +186,4 @@ Se tiver dúvida em qual arquivo editar:
 
 **Aguardando suas imagens para finalizar!** 🎨
 
+

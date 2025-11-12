@@ -1,11 +1,14 @@
 interface TopBadgeProps {
   number: string | number
   label: string
+  isVisible: boolean
 }
 
-export default function TopBadge({ number, label }: TopBadgeProps) {
+export default function TopBadge({ number, label, isVisible }: TopBadgeProps) {
   return (
-    <div className="flex justify-center mb-8">
+    <div className={`flex justify-center mb-12 mt-6 transition-opacity duration-700 ${
+      isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
+    }`}>
       <div className="relative">
         {/* Outer glow azul */}
         <div className="absolute inset-0 bg-[#00e5ff]/30 blur-2xl rounded-full scale-110" />
