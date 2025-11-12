@@ -1,19 +1,29 @@
 'use client'
 
+import { useState } from 'react'
+
 interface PrizeModalProps {
   isOpen: boolean
   onClose?: () => void
 }
 
 export default function PrizeModal({ isOpen, onClose }: PrizeModalProps) {
+  const [buttonPulse, setButtonPulse] = useState(false)
+
   if (!isOpen) return null
+
+  const handleBackdropClick = () => {
+    // Ao invés de fechar, faz o botão pulsar
+    setButtonPulse(true)
+    setTimeout(() => setButtonPulse(false), 600) // Duração da animação
+  }
 
   return (
     <div className={`fixed inset-0 z-50 flex items-center justify-center p-4 transition-all duration-500 ${
       isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
     }`}>
-      {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose} />
+      {/* Backdrop - Agora pulsa o botão ao invés de fechar */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm cursor-pointer" onClick={handleBackdropClick} />
       
       {/* Modal Glass */}
       <div className={`relative w-full max-w-md transition-all duration-700 ${
@@ -47,7 +57,9 @@ export default function PrizeModal({ isOpen, onClose }: PrizeModalProps) {
           {/* Botão verde */}
           <button
             onClick={onClose}
-            className="w-full bg-gradient-to-r from-[#00d665] to-[#00b855] hover:from-[#00f070] hover:to-[#00d665] text-white font-bold text-lg py-4 px-8 rounded-full shadow-[0_0_30px_rgba(0,214,101,0.5)] hover:shadow-[0_0_40px_rgba(0,214,101,0.7)] transition-all duration-300 transform hover:scale-105 active:scale-95"
+            className={`w-full bg-gradient-to-r from-[#00d665] to-[#00b855] hover:from-[#00f070] hover:to-[#00d665] text-white font-bold text-lg py-4 px-8 rounded-full shadow-[0_0_30px_rgba(0,214,101,0.5)] hover:shadow-[0_0_40px_rgba(0,214,101,0.7)] transition-all duration-300 transform hover:scale-105 active:scale-95 ${
+              buttonPulse ? 'animate-button-pulse' : ''
+            }`}
           >
             ¡RESCATAR BONO!
           </button>

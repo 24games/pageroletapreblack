@@ -86,6 +86,26 @@ body {
   }
 }
 
+/* Pulse do botão quando clica fora */
+@keyframes button-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 30px rgba(0, 214, 101, 0.5);
+  }
+  25% {
+    transform: scale(1.08);
+    box-shadow: 0 0 50px rgba(0, 214, 101, 0.9);
+  }
+  50% {
+    transform: scale(1.12);
+    box-shadow: 0 0 60px rgba(0, 214, 101, 1);
+  }
+  75% {
+    transform: scale(1.08);
+    box-shadow: 0 0 50px rgba(0, 214, 101, 0.9);
+  }
+}
+
 .animate-spin-wheel {
   animation: spin-wheel 5s cubic-bezier(0.17, 0.67, 0.12, 0.99) forwards;
 }
@@ -104,4 +124,8 @@ body {
 
 .animate-pulse-in {
   animation: pulse-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-button-pulse {
+  animation: button-pulse 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
