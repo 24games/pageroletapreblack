@@ -49,10 +49,18 @@ export default function PrizeModal({ isOpen, onClose }: PrizeModalProps) {
             </h2>
           </div>
 
-          {/* Texto explicativo */}
-          <p className="text-center text-white/90 text-base leading-relaxed mb-8 px-2">
-            ¡Tu oportunidad de rescatar este bono es haciendo clic en el botón de abajo ahora! Si lo dejas para después, tu oferta va a expirar.
-          </p>
+          {/* Texto explicativo - 3 linhas com negrito */}
+          <div className="text-center text-white/90 text-base leading-relaxed mb-8 px-2 space-y-2">
+            <p>
+              ¡Tu oportunidad de rescatar este bono es haciendo clic
+            </p>
+            <p>
+              en el botón de abajo <span className="font-bold text-white">¡AHORA MISMO!</span>
+            </p>
+            <p>
+              Si lo dejas para después, <span className="font-bold text-white">tu oferta va a expirar.</span>
+            </p>
+          </div>
 
           {/* Botão verde */}
           <button
