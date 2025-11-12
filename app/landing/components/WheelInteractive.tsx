@@ -54,7 +54,7 @@ export default function WheelInteractive({
       {/* Wheel container */}
       <div className="relative z-10 flex flex-col items-center">
         {/* Top pointer/marker at 12 o'clock - FIXED */}
-        <div className="mb-[-15px] flex justify-center relative z-30">
+        <div className="mb-[-65px] flex justify-center relative z-30">
           {pointerSrc ? (
             <Image
               src={pointerSrc}
